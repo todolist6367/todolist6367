@@ -1,0 +1,57 @@
+h1.titulo {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 130px;
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox .overlay {
+  position: absolute;
+  transform: translate(50%, -50%);
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid black;
+  transform: rotate(-90deg);
+  transition: all 0.3s;
+}
+
+.checkbox .icon {
+  color: white;
+  display: none;
+}
+
+.checkbox input:checked ~ .overlay {
+  background-color: black;
+  border-radius: 8px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border: 2px solid black;
+}
+
+.checkbox input:checked ~ .overlay .icon {
+  display: block;
+}
+div.card {
+display: flexbox;
+}
+h1.card-title {
+  font-size: 30px;
+}
+p.card-text {
+  font-size: 15px;
+}
+@media screen and (max-width: 576px) {
+  h1.card-title {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  p.card-text {
+    font-size: 15px;
+  }
+}
